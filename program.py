@@ -62,7 +62,7 @@ if __name__ == "__main__":
                         elif question != "done":
                             grade = int(question)
                             if grade <= 0 or grade > 5:
-                                print("Grade must be greater than 0 and or equal to 5")
+                                print("Grade must be greater than 0 and less or equal to 5")
                                 continue
                             else:
                                 selected_grade_book.add_grade(grade) 
