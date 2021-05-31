@@ -6,42 +6,42 @@ if __name__ == "__main__":
     
     grade_books = []
     
-    print("Welcome to a Grade Book")
+    print("Welcome to a GradeBook")
     
     while True:
         try:
-            control_center = int(input("What would you like to do: \n1)Create Grade Book \n2)View Grade Books \n3)Add and view Grades\n4)Calculate average Grade\n5)Delete Grade Book\n6)Exit\n>"))
+            control_center = int(input("What would you like to do: \n1)Create GradeBook \n2)View GradeBooks \n3)Add and view Grades\n4)Calculate average Grade\n5)Delete GradeBook\n6)Exit\n>"))
         except ValueError:
             print("Enter only numbers")
             continue    
         if control_center == 1:
             grade_book = GradeBook()
-            grade_book.name = input("Name your Grade Book: ")
+            grade_book.name = input("Name your GradeBook: ")
             grade_books.append(grade_book)
             print()
-            print("Your added new Grade Book and it is named {}".format(grade_book.name))
+            print("Your added new GradeBook and it is named {}".format(grade_book.name))
             print()
             continue
         elif control_center == 2:
             if not grade_books:
                 print()
-                print("There are no Grade Books")
+                print("There are no GradeBooks")
                 print()
             counter = 1
             print()
             for grade_book in grade_books:
-                print(f"Your Grade Book {counter} named: {grade_book.name}")
+                print(f"Your GradeBook {counter} named: {grade_book.name}")
                 counter +=1
             print()
         elif control_center == 3:
             if not grade_books:
                 print()
-                print("You must create Grade Book first")
+                print("You must create GradeBook first")
                 print()
                 continue
             for grade_book in grade_books:
                 print(grade_book.name)
-            select_grade_book = input("Select Grade Book: ")
+            select_grade_book = input("Select GradeBook: ")
             for grade_book in grade_books:
                 if select_grade_book == grade_book.name:
                     selected_grade_book = grade_book
@@ -52,7 +52,7 @@ if __name__ == "__main__":
                 print("Name must be equal")
                 print()
                 continue    
-            action = input("Would You like to 'add' grades to this Grade Book or to 'view' it: ")
+            action = input("Would You like to 'add' grades to this GradeBook or to 'view' it: ")
             if action.lower() == "add":
                 while True:
                     try:
@@ -73,7 +73,7 @@ if __name__ == "__main__":
         elif control_center == 4:
             if not grade_books:
                 print()
-                print("You must create Grade Book first")
+                print("You must create GradeBook first")
                 print()
                 continue
             for grade_book in grade_books:
@@ -98,11 +98,11 @@ if __name__ == "__main__":
                         print()
                         break                  
             else:
-                print("Please type existed Grade Book")
+                print("Please type existed GradeBook")
         elif control_center == 5:
             if not grade_books:
                 print()
-                print("You must create Grade Book first")
+                print("You must create GradeBook first")
                 print()
                 continue
             for grade_book in grade_books:
@@ -112,7 +112,7 @@ if __name__ == "__main__":
                 if select_grade_book == grade_book.name:
                     grade_books.remove(grade_book)    
                     print()
-                    print(f"Grade Book named {grade_book.name} is deleted")
+                    print(f"GradeBook named {grade_book.name} is deleted")
                     print()
                     break
         elif control_center == 6:
