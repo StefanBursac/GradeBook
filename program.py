@@ -6,7 +6,7 @@ if __name__ == "__main__":
     
     grade_books = []
     
-    print("Welcome to grade_book")
+    print("Welcome to a Grade Book")
     
     while True:
         try:
@@ -28,9 +28,11 @@ if __name__ == "__main__":
                 print("There are no Grade Books")
                 print()
             counter = 1
+            print()
             for grade_book in grade_books:
-                print(f"Your Grade Book {counter} named: {grade_book.name}") 
+                print(f"Your Grade Book {counter} named: {grade_book.name}")
                 counter +=1
+            print()
         elif control_center == 3:
             if not grade_books:
                 print()
@@ -117,15 +119,4 @@ if __name__ == "__main__":
             print("Exiting")
             time.sleep(1)
             break
-
-                
-            
-
-
-             
-                        
-
-            
-                    
-
-            
+        
