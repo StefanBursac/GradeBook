@@ -60,9 +60,13 @@ if __name__ == "__main__":
                         if question == "done":
                             break
                         elif question != "done":
-                            grade = question 
-                            selected_grade_book.add_grade(int(grade)) 
-                            continue
+                            grade = int(question)
+                            if grade <= 0 or grade > 5:
+                                print("Grade must be greater than 0 and or equal to 5")
+                                continue
+                            else:
+                                selected_grade_book.add_grade(grade) 
+                                continue
                     except ValueError:
                         print("Value must be 'number' or 'done'")
                         continue
